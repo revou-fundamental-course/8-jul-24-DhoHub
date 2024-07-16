@@ -1,11 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator-BMI</title>
+    <title>Kalkulator-BMI</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
+    <header>
+        <h1>Form Kalkulator-BMI (Body Mass Index)</h1>
+    </header>
+    <main>
+        <div class="main-container">
+            <!--form display-->
+            <div class="calc-form">
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan,
+                    berat badan ideal juga menandakan kondisi tubuh yang sehat.
+                    bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.
+                </p>
+                <div class="form-items">
+                    <div>
+                        <label>Jenis Kelamin</label><br>
+                        <input type="radio" name="sex" id="sex-man" value="male">
+                        <label for="sex-man">Laki-laki</label>
+                        <input type="radio" name="sex" id="sex-women" value="famale">
+                        <label for="sex-women">Perempuan</label>
+                    </div>
+                    <div>
+                        <label>Berat Badan (kg)</label><br>
+                        <input type="number" id="weightInput"> 
+                    </div>
+                    <div>
+                        <label>Usia (tahun)</label><br>
+                        <input type="number" id="ageInput"> 
+                    </div>
+                    <div>
+                        <label>Tinggi Badan (cm)</label><br>
+                        <input type="number" id="heightInput"> 
+                    </div>
+                    <button type="submit" id="calc-button">Hitung BMI</button>
+                    <button type="reset" id="reset-button" onclick="resetForm()">Reset</button>
+                </div>
+                 <!--result-->
+                <div class="result" >
+                    <div class="form-result">
+                        <h4>Status BMI</h4>
+                        <h1 id="result"></h1>
+                        <h4 id="status"></h4>
+                    </div>   
+                    <div class="penyakit">
+                        <h2>Keterangan</h2>
+                        <p id="diseases"></p>
+                    </div>
+                </div>
+                <div class="form-consul">
+                    <p>Kalkulator BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari 
+                        kesehatan tubuh dan resiko penyakit seseorang. Anda perlu 
+                        konsultasi lebih lanjut mengenai resiko dan kekhawatiran 
+                        Anda terkait dengan berat badan Anda.
+                    </p>
+                    <a href="https://www.halodoc.com/tanya-dokter/cari?source=com.halodoc.bmicalculator&category_id=d8b7c9e4-bc99-4297-ac15-44a3a51d16a3&category_name=Dokter%20Umum" target="_blank">
+                        <button>
+                            Konsultasi Via Online
+                        </button>
+                    </a>
+                    
+                    <p><b>*Created By:Ridho </b></p>
+                </div>
+            </div>
+        </div>
+    </main>
+  
+    <script src="js/script.js"></script>
     
 </body>
 </html>
